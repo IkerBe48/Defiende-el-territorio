@@ -7,9 +7,9 @@ public class Input implements KeyListener {
 
     public static final  int IZQ = 0;
     public static final  int DER = 1;
-    public static final  int ESPACIO = 4;
+    public static final  int ESPACIO = 2;
 
-    public static boolean[] teclas = new boolean[5];
+    public static boolean[] teclas = new boolean[3];
     @Override
     public void keyTyped(KeyEvent e) {
 

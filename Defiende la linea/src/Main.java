@@ -1,10 +1,6 @@
 import core.*;
-import objetos.Fondo;
-import objetos.Fondo_linea;
 import objetos.Soldado;
-import objetos.Spawner;
 import renders.Renderer;
-import update.Updater;
 
 import java.awt.*;
 import java.io.IOException;
@@ -38,7 +34,6 @@ public class Main {
 
         Window pantalla = new ventana("Defiende la frontera", ventana.getvAncho(),ventana.getvAlto());
         Renderer renderer = new Renderer();
-        Updater updater = new Updater();
 
         pantalla.addKeyListener(new Input());
         pantalla.add(renderer);
@@ -46,14 +41,10 @@ public class Main {
         pantalla.setVisible(true);
         //Arranca el juego
         //oolean arrancaJuego = true;
-        new Fondo(0,0);
-        new Fondo_linea(0,700);
         new Soldado(300,680);
-        new Spawner();
         FPS.calcinicioTiempo();
         while (arrancaJuego[0]) {
             //actualizamos el estado del juego
-            updater.update();
             renderer.repaint();
             //mostramos el juego
            //recalculamos el tiempo delta
